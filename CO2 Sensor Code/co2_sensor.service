@@ -1,0 +1,12 @@
+[Unit]
+Description=C02 Sensor Service
+After=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/Desktop/LifeSupport/python/raspberrypi
+ExecStart=/usr/bin/python3 /home/pi/Desktop/LifeSupport/python/raspberrypi/get_co2.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
